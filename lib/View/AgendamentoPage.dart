@@ -172,13 +172,8 @@ class _AgendamentoPageState extends State<AgendamentoPage> {
        Navigator.pop(context, false);
      }
     else{
-      if (_doador.genero == 'Feminino' ){
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Erro! Não faz 60 dias desde a última doação.')),);
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Erro! Não faz 90 dias desde a última doação.')),);
-      }
+       ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Erro! Não faz $_IntervaloDiasGenero dias desde a última doação.')),);
     }
     } else{
       ScaffoldMessenger.of(context).showSnackBar(
